@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Drowsiness Detection</string>
     <string name="title_driver_drowsiness_detection">Driver Drowsiness Detection</string>
-    <string name="subtitle_driver_drowsiness_detection">Java app for monitoring eye movement, blink pattern, and alert state.</string>
+    <string name="subtitle_driver_drowsiness_detection">Real-time face and eye monitoring with 3-second fatigue alerts.</string>
+    <string name="camera_card_title">Live Driver Camera</string>
+    <string name="guard_window">3 sec guard</string>
     <string name="camera_preview">Camera preview</string>
     <string name="ready">Ready</string>
     <string name="start_camera_monitoring">Start Camera Monitoring</string>
@@ -14,7 +16,7 @@
     <string name="eyes_closed_empty">Eyes closed: 0.0 sec</string>
     <string name="eyes_closed_value">Eyes closed: %1$.1f sec</string>
     <string name="no_alert">No alert</string>
-    <string name="hint_camera_monitoring">Keep your face visible to the front camera. If both eyes remain closed for 5 seconds, the app plays a danger alarm.</string>
+    <string name="hint_camera_monitoring">Keep your face visible to the front camera. If both eyes remain closed for 3 seconds, the app plays a danger alarm and vibrates.</string>
     <string name="scanning">Scanning</string>
     <string name="looking_for_face">Looking for face</string>
     <string name="camera_permission_needed">Camera permission is needed to monitor eyes.</string>
@@ -26,7 +28,8 @@
     <string name="danger">DANGER</string>
     <string name="alarm_wake_up">ALARM: Wake up and focus on the road</string>
     <string name="eyes_closed">Eyes Closed</string>
-    <string name="warning_alarm_at_5_seconds">Warning: eyes closed, alarm at 5 seconds</string>
+    <string name="warning_alarm_at_3_seconds">Warning: eyes closed, alarm at 3 seconds</string>
+    <string name="progress_to_alarm">Progress to alarm</string>
     <string name="awake">Awake</string>
     <string name="no_face">No Face</string>
     <string name="place_face_in_front_camera">Place face in front camera</string>

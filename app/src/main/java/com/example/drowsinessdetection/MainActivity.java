@@ -13,6 +13,7 @@ import android.os.SystemClock;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,7 +48,7 @@ import java.util.concurrent.Executors;
 public class MainActivity extends AppCompatActivity {
     private static final int CAMERA_PERMISSION_REQUEST = 1001;
     private static final float EYE_CLOSED_THRESHOLD = 0.35f;
-    private static final long DANGER_AFTER_MS = 5000L;
+    private static final long DANGER_AFTER_MS = 3000L;
 
     private final Handler mainHandler = new Handler(Looper.getMainLooper());
     private ExecutorService cameraExecutor;
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView blinkValueText;
     private TextView closedEyeText;
     private TextView alertText;
+    private ProgressBar drowsyProgress;
     private Button startStopButton;
 
     private boolean monitoring = false;
@@ -78,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 toneGenerator.startTone(ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD, 800);
             }
             vibrateAlert();
-            mainHandler.postDelayed(this, 900);
+            mainHandler.postDelayed(this, 850);
         }
     };
 
@@ -99,7 +101,9 @@ public class MainActivity extends AppCompatActivity {
         blinkValueText = findViewById(R.id.blinkValueText);
         closedEyeText = findViewById(R.id.closedEyeText);
         alertText = findViewById(R.id.alertText);
+        drowsyProgress = findViewById(R.id.drowsyProgress);
         startStopButton = findViewById(R.id.startStopButton);
+        drowsyProgress.setMax((int) DANGER_AFTER_MS);
 
         cameraExecutor = Executors.newSingleThreadExecutor();
         toneGenerator = new ToneGenerator(AudioManager.STREAM_ALARM, 100);
@@ -306,6 +310,7 @@ public class MainActivity extends AppCompatActivity {
         eyeValueText.setText(getString(R.string.eyes_open_probability_values, leftEyeOpen, rightEyeOpen));
         blinkValueText.setText(R.string.face_detected_yes);
         closedEyeText.setText(getString(R.string.eyes_closed_value, closedForMs / 1000.0));
+        drowsyProgress.setProgress((int) Math.min(closedForMs, DANGER_AFTER_MS));
 
         if (danger) {
             statusText.setText(R.string.danger);
@@ -315,13 +320,14 @@ public class MainActivity extends AppCompatActivity {
         } else if (eyesClosed) {
             statusText.setText(R.string.eyes_closed);
             statusText.setTextColor(getColor(R.color.warning));
-            alertText.setText(R.string.warning_alarm_at_5_seconds);
+            alertText.setText(R.string.warning_alarm_at_3_seconds);
             alertText.setTextColor(getColor(R.color.warning));
         } else {
             statusText.setText(R.string.awake);
             statusText.setTextColor(getColor(R.color.safe));
             alertText.setText(R.string.no_alert);
             alertText.setTextColor(getColor(R.color.safe));
+            drowsyProgress.setProgress(0);
         }
     }
 
@@ -333,6 +339,7 @@ public class MainActivity extends AppCompatActivity {
         eyeValueText.setText(R.string.eyes_open_probability_empty);
         blinkValueText.setText(R.string.face_detected_no);
         closedEyeText.setText(R.string.eyes_closed_empty);
+        drowsyProgress.setProgress(0);
         alertText.setText(R.string.place_face_in_front_camera);
         alertText.setTextColor(getColor(R.color.warning));
     }
@@ -344,6 +351,7 @@ public class MainActivity extends AppCompatActivity {
         eyeValueText.setText(R.string.eyes_open_probability_empty);
         blinkValueText.setText(R.string.face_detected_no);
         closedEyeText.setText(R.string.eyes_closed_empty);
+        drowsyProgress.setProgress(0);
         alertText.setText(R.string.no_alert);
         alertText.setTextColor(getColor(R.color.safe));
     }
@@ -372,9 +380,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            vibrator.vibrate(VibrationEffect.createOneShot(600, VibrationEffect.DEFAULT_AMPLITUDE));
+            vibrator.vibrate(VibrationEffect.createWaveform(
+                    new long[]{0, 250, 120, 350},
+                    new int[]{0, 255, 0, 255},
+                    -1
+            ));
         } else {
-            vibrator.vibrate(600);
+            vibrator.vibrate(new long[]{0, 250, 120, 350}, -1);
         }
     }
 }

@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="white">#FFFFFFFF</color>
-    <color name="screen_background">#F6F8FB</color>
+    <color name="screen_background">#EEF4F8</color>
+    <color name="screen_background_dark">#DCE9EF</color>
     <color name="panel_background">#FFFFFFFF</color>
-    <color name="panel_border">#D9E2EF</color>
-    <color name="hero_background">#0F172A</color>
-    <color name="hero_accent">#38BDF8</color>
-    <color name="primary">#1F6FEB</color>
+    <color name="panel_border">#D7E2EA</color>
+    <color name="hero_background">#111827</color>
+    <color name="hero_background_end">#164E63</color>
+    <color name="hero_accent">#22D3EE</color>
+    <color name="primary">#2563EB</color>
+    <color name="primary_dark">#1D4ED8</color>
     <color name="primary_soft">#EAF2FF</color>
-    <color name="text_primary">#172033</color>
-    <color name="text_secondary">#5D667A</color>
-    <color name="muted_surface">#EEF3F8</color>
-    <color name="safe">#157F3B</color>
-    <color name="warning">#B26A00</color>
-    <color name="danger">#C62828</color>
+    <color name="text_primary">#111827</color>
+    <color name="text_secondary">#64748B</color>
+    <color name="muted_surface">#EDF3F7</color>
+    <color name="safe">#059669</color>
+    <color name="safe_soft">#DCFCE7</color>
+    <color name="warning">#D97706</color>
+    <color name="warning_soft">#FEF3C7</color>
+    <color name="danger">#DC2626</color>
+    <color name="danger_soft">#FEE2E2</color>
+    <color name="ink_soft">#334155</color>
 </resources>

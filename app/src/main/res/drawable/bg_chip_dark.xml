@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <gradient
-        android:angle="135"
-        android:endColor="@color/hero_background_end"
-        android:startColor="@color/hero_background" />
+    <solid android:color="#223044" />
+    <stroke
+        android:width="1dp"
+        android:color="#426079" />
     <corners android:radius="8dp" />
 </shape>

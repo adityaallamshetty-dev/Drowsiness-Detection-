@@ -2,8 +2,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <gradient
         android:angle="135"
-        android:centerColor="@color/hero_background_mid"
-        android:endColor="@color/hero_background_end"
-        android:startColor="@color/hero_background" />
+        android:endColor="#1D4ED8"
+        android:startColor="@color/hero_accent" />
     <corners android:radius="8dp" />
 </shape>

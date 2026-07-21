@@ -3,6 +3,7 @@
     <string name="title_driver_drowsiness_detection">Driver Drowsiness Detection</string>
     <string name="subtitle_driver_drowsiness_detection">Real-time face and eye monitoring with 3-second fatigue alerts.</string>
     <string name="status_chip">Active guard</string>
+    <string name="live_camera_chip">Live scan</string>
     <string name="camera_card_title">Live Driver Camera</string>
     <string name="camera_card_subtitle">Front camera eye tracking</string>
     <string name="guard_window">3 sec guard</string>
@@ -10,7 +11,6 @@
     <string name="ready">Ready</string>
     <string name="start_camera_monitoring">Start Camera Monitoring</string>
     <string name="stop_monitoring">Stop Monitoring</string>
-    <string name="live_signals">Live Signals</string>
     <string name="eyes_open_probability_empty">Eyes open probability: N/A</string>
     <string name="eyes_open_probability_values">Eyes open probability: L %1$.2f / R %2$.2f</string>
     <string name="face_detected_yes">Face detected: Yes</string>
@@ -18,7 +18,6 @@
     <string name="eyes_closed_empty">Eyes closed: 0.0 sec</string>
     <string name="eyes_closed_value">Eyes closed: %1$.1f sec</string>
     <string name="no_alert">No alert</string>
-    <string name="hint_camera_monitoring">Keep your face visible to the front camera. If both eyes remain closed for 3 seconds, the app plays a danger alarm and vibrates.</string>
     <string name="scanning">Scanning</string>
     <string name="looking_for_face">Looking for face</string>
     <string name="camera_permission_needed">Camera permission is needed to monitor eyes.</string>
@@ -35,7 +34,6 @@
     <string name="alarm_window_title">Fatigue Alarm Window</string>
     <string name="signal_quality_title">Detection Signals</string>
     <string name="face_tracking">Face tracking</string>
-    <string name="eye_probability">Eye probability</string>
     <string name="driver_safety_note">Designed for quick glance checks while monitoring. Keep lighting even and the driver face centered.</string>
     <string name="awake">Awake</string>
     <string name="no_face">No Face</string>

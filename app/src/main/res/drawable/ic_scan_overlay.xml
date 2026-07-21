@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="188dp"
+    android:viewportWidth="320"
+    android:viewportHeight="300">
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M28,42h42M28,42v42M292,42h-42M292,42v42M28,258h42M28,258v-42M292,258h-42M292,258v-42"
+        android:strokeColor="@color/camera_overlay"
+        android:strokeLineCap="round"
+        android:strokeWidth="5" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M76,150h168"
+        android:strokeColor="#8822D3EE"
+        android:strokeLineCap="round"
+        android:strokeWidth="3" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M112,128c14,-9 30,-9 44,0M164,128c14,-9 30,-9 44,0"
+        android:strokeColor="#DDFFFFFF"
+        android:strokeLineCap="round"
+        android:strokeWidth="4" />
+</vector>

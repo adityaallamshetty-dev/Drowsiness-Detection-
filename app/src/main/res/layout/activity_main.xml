@@ -14,90 +14,114 @@
         android:orientation="vertical"
         android:padding="18dp">
 
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_hero_panel"
             android:elevation="8dp"
-            android:orientation="vertical"
             android:padding="18dp">
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="92dp"
+                android:layout_gravity="end|bottom"
+                android:alpha="0.9"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_sleepy_eye_watermark" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="42dp"
-                    android:layout_height="42dp"
-                    android:background="@drawable/bg_chip_dark"
-                    android:importantForAccessibility="no"
-                    android:padding="9dp"
-                    android:src="@drawable/ic_shield" />
+                android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:background="@drawable/bg_icon_glow"
+                        android:importantForAccessibility="no"
+                        android:padding="9dp"
+                        android:src="@drawable/ic_shield" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_driver_drowsiness_detection"
+                            android:textColor="@color/white"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/subtitle_driver_drowsiness_detection"
+                            android:textColor="@color/hero_accent_soft"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/title_driver_drowsiness_detection"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_success_pill"
+                        android:gravity="center"
+                        android:text="@string/status_chip"
                         android:textColor="@color/white"
-                        android:textSize="24sp"
+                        android:textSize="13sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="@string/subtitle_driver_drowsiness_detection"
-                        android:textColor="@color/panel_border"
-                        android:textSize="13sp" />
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_chip_dark"
+                        android:gravity="center"
+                        android:text="@string/live_camera_chip"
+                        android:textColor="@color/hero_accent"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_chip_dark"
+                        android:gravity="center"
+                        android:text="@string/guard_window"
+                        android:textColor="@color/hero_accent_soft"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="38dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_chip_dark"
-                    android:gravity="center"
-                    android:text="@string/status_chip"
-                    android:textColor="@color/white"
-                    android:textSize="13sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="38dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_chip_dark"
-                    android:gravity="center"
-                    android:text="@string/guard_window"
-                    android:textColor="@color/hero_accent"
-                    android:textSize="13sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </LinearLayout>
+        </FrameLayout>
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="330dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/bg_camera_frame"
-            android:clipToOutline="true"
             android:elevation="8dp"
             android:padding="4dp">
 
@@ -107,6 +131,12 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/bg_camera_frame"
                 android:contentDescription="@string/camera_preview" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_scan_overlay" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -165,7 +195,7 @@
             <ImageView
                 android:layout_width="44dp"
                 android:layout_height="44dp"
-                android:background="@drawable/bg_metric_tile"
+                android:background="@drawable/bg_icon_glow"
                 android:importantForAccessibility="no"
                 android:padding="10dp"
                 android:src="@drawable/ic_eye" />
@@ -214,13 +244,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:baselineAligned="false"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="112dp"
                 android:layout_weight="1"
-                android:background="@drawable/bg_panel"
+                android:background="@drawable/bg_signal_card"
                 android:elevation="4dp"
                 android:orientation="vertical"
                 android:padding="14dp">
@@ -255,7 +286,7 @@
                 android:layout_height="112dp"
                 android:layout_marginStart="12dp"
                 android:layout_weight="1"
-                android:background="@drawable/bg_panel"
+                android:background="@drawable/bg_signal_card"
                 android:elevation="4dp"
                 android:orientation="vertical"
                 android:padding="14dp">

@@ -2,7 +2,9 @@
     <string name="app_name">Drowsiness Detection</string>
     <string name="title_driver_drowsiness_detection">Driver Drowsiness Detection</string>
     <string name="subtitle_driver_drowsiness_detection">Real-time face and eye monitoring with 3-second fatigue alerts.</string>
+    <string name="status_chip">Active guard</string>
     <string name="camera_card_title">Live Driver Camera</string>
+    <string name="camera_card_subtitle">Front camera eye tracking</string>
     <string name="guard_window">3 sec guard</string>
     <string name="camera_preview">Camera preview</string>
     <string name="ready">Ready</string>
@@ -30,6 +32,11 @@
     <string name="eyes_closed">Eyes Closed</string>
     <string name="warning_alarm_at_3_seconds">Warning: eyes closed, alarm at 3 seconds</string>
     <string name="progress_to_alarm">Progress to alarm</string>
+    <string name="alarm_window_title">Fatigue Alarm Window</string>
+    <string name="signal_quality_title">Detection Signals</string>
+    <string name="face_tracking">Face tracking</string>
+    <string name="eye_probability">Eye probability</string>
+    <string name="driver_safety_note">Designed for quick glance checks while monitoring. Keep lighting even and the driver face centered.</string>
     <string name="awake">Awake</string>
     <string name="no_face">No Face</string>
     <string name="place_face_in_front_camera">Place face in front camera</string>
